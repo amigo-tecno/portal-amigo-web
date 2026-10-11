@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   GraduationCap,
   MapPin,
   Briefcase,
   ExternalLink,
-  ChevronRight,
   ShieldCheck,
   Cpu,
   Sparkles,
@@ -22,12 +22,10 @@ import {
   Clock,
   Compass,
   FileText,
-  Server
+  UserPlus
 } from "lucide-react";
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState<"enem" | "geo">("enem");
-
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900 selection:bg-emerald-500 selection:text-white">
       {/* 1. Header / Navbar de Alto Padrão */}
@@ -91,12 +89,12 @@ export default function HomePage() {
               <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
             </a>
             <a
-              href="https://geo.portalamigo.com.br"
+              href="https://geo.portalamigo.com.br/cadastro"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-bold px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-all shadow-xs"
             >
-              <span>Acessar Amigo Geo</span>
+              <span>Cadastrar no Geo</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -187,7 +185,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">Prepára ENEM</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  SaaS educacional completo com simulados adaptativos, todas as 2.430 questões da história do ENEM, predição de nota TRI e resoluções comentadas passo a passo por inteligência artificial ultrarrápida.
+                  SaaS educacional completo com simulados adaptativos, mais de 2.430 questões catalogadas da história do ENEM, predição de nota TRI e resoluções comentadas passo a passo por inteligência artificial ultrarrápida.
                 </p>
                 <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium mb-8">
                   <li className="flex items-center gap-2">
@@ -260,12 +258,12 @@ export default function HomePage() {
                   Ver detalhes da plataforma ↓
                 </a>
                 <a
-                  href="https://geo.portalamigo.com.br"
+                  href="https://geo.portalamigo.com.br/cadastro"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-bold px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition-all"
                 >
-                  <span>Abrir Amigo Geo</span>
+                  <span>Criar Conta no Amigo Geo</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -290,14 +288,14 @@ export default function HomePage() {
               </h2>
               
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-                Desenvolvemos o Prepára ENEM para estudantes que valorizam o tempo e exigem precisão. Não perca horas com explicações genéricas: estude com a base oficial completa e suporte de IA instantâneo.
+                Desenvolvemos o Prepára ENEM para estudantes que valorizam o tempo e exigem precisão. Não perca horas com explicações genéricas: estude com a base oficial completa de mais de 2.430 questões e suporte de IA instantâneo.
               </p>
 
               {/* Grid de Diferenciais */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
                   <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-3">
-                    2.4k
+                    2.4k+
                   </div>
                   <h4 className="font-bold text-slate-900 text-sm mb-1">Todas as Edições Oficiais</h4>
                   <p className="text-xs text-slate-500">De 1998 a 2024 catalogadas e filtráveis por matéria, ano e dificuldade.</p>
@@ -349,57 +347,27 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Mockup Interativo Visual do ENEM */}
+            {/* Imagem Real do Sistema ENEM */}
             <div className="lg:col-span-6">
-              <div className="relative rounded-3xl p-6 sm:p-8 bg-slate-900 text-white shadow-2xl border border-slate-800">
-                <div className="flex items-center justify-between pb-4 border-b border-slate-800 text-xs">
+              <div className="relative rounded-3xl p-2.5 bg-gradient-to-b from-slate-200 to-slate-300/80 shadow-2xl border border-slate-200 overflow-hidden group">
+                <div className="bg-slate-900 rounded-2xl p-2 flex items-center justify-between text-xs text-slate-300 mb-2 px-4">
                   <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-red-500/80"></span>
-                    <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                    <span className="w-3 h-3 rounded-full bg-green-500/80"></span>
-                    <span className="text-slate-400 font-mono ml-2">enem.portalamigo.com.br</span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                    <span className="font-mono text-[11px] text-slate-400 ml-2">enem.portalamigo.com.br</span>
                   </div>
-                  <span className="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-400 font-bold text-[10px]">
-                    Simulado em Andamento
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400">
+                    Interface Real em Produção
                   </span>
                 </div>
-
-                <div className="mt-6 space-y-4">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span>Ciências da Natureza • Física (ENEM 2024)</span>
-                    <span className="font-mono text-emerald-400">Questão #138</span>
-                  </div>
-
-                  <p className="text-sm font-medium text-slate-200 leading-relaxed">
-                    Um circuito elétrico residencial opera sob tensão constante de 127 V. Para garantir a segurança térmica dos condutores...
-                  </p>
-
-                  <div className="space-y-2 pt-2">
-                    {["A) Resistência equivalente diminui pela metade.", "B) A corrente máxima atinge o limite do disjuntor.", "C) A potência total dissipada é constante."].map((alt, idx) => (
-                      <div
-                        key={idx}
-                        className={`p-3 rounded-xl text-xs font-medium border flex items-center justify-between ${
-                          idx === 1
-                            ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-300"
-                            : "bg-slate-800/60 border-slate-700/60 text-slate-300"
-                        }`}
-                      >
-                        <span>{alt}</span>
-                        {idx === 1 && <CheckCircle2 className="w-4 h-4 text-emerald-400" />}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Caixa de IA Comentada */}
-                  <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-800/50 text-xs space-y-1.5 mt-4">
-                    <div className="flex items-center gap-1.5 text-emerald-400 font-bold">
-                      <Sparkles className="w-3.5 h-3.5" />
-                      <span>Resolução Didática (IA Prepára ENEM - 0.9s)</span>
-                    </div>
-                    <p className="text-slate-300 text-[11px] leading-relaxed">
-                      Pela 1ª Lei de Ohm (U = R · i), ao associar novas cargas em paralelo, a resistência total do ramo cai, elevando proporcionalmente a intensidade da corrente até o gatilho de proteção térmica.
-                    </p>
-                  </div>
+                <div className="relative rounded-xl overflow-hidden border border-slate-200 bg-white shadow-inner">
+                  <img
+                    src="/screenshot-enem.png"
+                    alt="Interface Real do Prepára ENEM"
+                    className="w-full h-auto object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -411,64 +379,27 @@ export default function HomePage() {
       <section id="geo" className="py-20 sm:py-28 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Mockup Interativo Visual do GEO */}
+            {/* Imagem Real do Sistema GEO */}
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="relative rounded-3xl p-6 sm:p-8 bg-slate-900 text-white shadow-2xl border border-slate-800">
-                <div className="flex items-center justify-between pb-4 border-b border-slate-800 text-xs">
+              <div className="relative rounded-3xl p-2.5 bg-gradient-to-b from-slate-200 to-slate-300/80 shadow-2xl border border-slate-200 overflow-hidden group">
+                <div className="bg-slate-900 rounded-2xl p-2 flex items-center justify-between text-xs text-slate-300 mb-2 px-4">
                   <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-red-500/80"></span>
-                    <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                    <span className="w-3 h-3 rounded-full bg-green-500/80"></span>
-                    <span className="text-slate-400 font-mono ml-2">geo.portalamigo.com.br</span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                    <span className="font-mono text-[11px] text-slate-400 ml-2">geo.portalamigo.com.br</span>
                   </div>
-                  <span className="px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 font-bold text-[10px]">
-                    SIGEF / CAR Conectado
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-orange-500/20 text-orange-400">
+                    Interface Real em Produção
                   </span>
                 </div>
-
-                <div className="mt-6 space-y-4">
-                  {/* Card do Imóvel Auditado */}
-                  <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-between">
-                    <div>
-                      <span className="text-[10px] font-bold text-orange-400 uppercase tracking-wider">Fazenda Santa Luzia</span>
-                      <h5 className="text-sm font-bold text-white">Certificação INCRA / SIGEF Brasil</h5>
-                      <span className="text-xs text-slate-400 font-mono">Área: 2.450,80 ha • Situação: Aprovada</span>
-                    </div>
-                    <div className="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center font-bold">
-                      <Compass className="w-5 h-5" />
-                    </div>
-                  </div>
-
-                  {/* Grid de Camadas Auditadas */}
-                  <div className="grid grid-cols-2 gap-2.5 text-xs">
-                    <div className="p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                      <span className="text-[10px] text-slate-400 block">SICAR (CAR Nacional)</span>
-                      <strong className="text-emerald-400 font-bold text-xs">✓ Recibo Regular</strong>
-                    </div>
-                    <div className="p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                      <span className="text-[10px] text-slate-400 block">Embargos IBAMA / ICMBio</span>
-                      <strong className="text-emerald-400 font-bold text-xs">✓ 0 Sobreposições</strong>
-                    </div>
-                    <div className="p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                      <span className="text-[10px] text-slate-400 block">PRODES / DETER (INPE)</span>
-                      <strong className="text-emerald-400 font-bold text-xs">✓ Sem Alertas Recentes</strong>
-                    </div>
-                    <div className="p-3 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                      <span className="text-[10px] text-slate-400 block">Terras Indígenas / UC</span>
-                      <strong className="text-emerald-400 font-bold text-xs">✓ Fora de Limite</strong>
-                    </div>
-                  </div>
-
-                  {/* Foto de Satélite com Contorno */}
-                  <div className="p-4 rounded-xl bg-gradient-to-r from-slate-800 to-slate-800/60 border border-orange-500/40 text-xs flex items-center justify-between">
-                    <div className="space-y-1">
-                      <span className="text-[10px] text-orange-300 font-bold uppercase tracking-wider">Satélite em Alta Resolução</span>
-                      <p className="text-xs text-slate-300 font-medium">Contorno perimétrico dinâmico em vetor laranja oficial</p>
-                    </div>
-                    <span className="text-xs px-3 py-1.5 rounded-lg bg-orange-600 text-white font-bold">
-                      Laudo Pronto
-                    </span>
-                  </div>
+                <div className="relative rounded-xl overflow-hidden border border-slate-200 bg-white shadow-inner">
+                  <img
+                    src="/screenshot-geo-home.png"
+                    alt="Interface Real do Amigo Geo"
+                    className="w-full h-auto object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -524,21 +455,21 @@ export default function HomePage() {
 
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <a
-                  href="https://geo.portalamigo.com.br"
+                  href="https://geo.portalamigo.com.br/cadastro"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md shadow-slate-900/20 transition-all hover:-translate-y-0.5"
                 >
-                  <span>Abrir Mapa do Amigo Geo</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <UserPlus className="w-4 h-4 text-emerald-400" />
+                  <span>Cadastrar e Acessar Amigo Geo</span>
                 </a>
                 <a
-                  href="https://geo.portalamigo.com.br/planos"
+                  href="https://geo.portalamigo.com.br/#planos"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-sm transition-all shadow-xs"
                 >
-                  <span>Consultar Planos e Consultas</span>
+                  <span>Consultar Planos e Preços</span>
                 </a>
               </div>
             </div>
@@ -643,7 +574,7 @@ export default function HomePage() {
                 </li>
                 <li>
                   <a href="https://enem.portalamigo.com.br/questoes" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
-                    Banco de 2.430 Questões
+                    Banco com 2.430 Questões
                   </a>
                 </li>
                 <li>
@@ -664,12 +595,12 @@ export default function HomePage() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://geo.portalamigo.com.br/mapa" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-                    Mapa Interativo
+                  <a href="https://geo.portalamigo.com.br/cadastro" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                    Mapa Interativo (Criar Conta)
                   </a>
                 </li>
                 <li>
-                  <a href="https://geo.portalamigo.com.br/planos" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                  <a href="https://geo.portalamigo.com.br/#planos" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
                     Planos e Créditos
                   </a>
                 </li>
