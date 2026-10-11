@@ -89,12 +89,12 @@ export default function HomePage() {
               <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
             </a>
             <a
-              href="https://geo.portalamigo.com.br/cadastro"
+              href="https://geo.portalamigo.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-bold px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-all shadow-xs"
             >
-              <span>Cadastrar no Geo</span>
+              <span>Abrir Amigo Geo</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -258,12 +258,12 @@ export default function HomePage() {
                   Ver detalhes da plataforma ↓
                 </a>
                 <a
-                  href="https://geo.portalamigo.com.br/cadastro"
+                  href="https://geo.portalamigo.com.br"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-bold px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition-all"
                 >
-                  <span>Criar Conta no Amigo Geo</span>
+                  <span>Abrir Amigo Geo</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -455,13 +455,13 @@ export default function HomePage() {
 
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <a
-                  href="https://geo.portalamigo.com.br/cadastro"
+                  href="https://geo.portalamigo.com.br"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md shadow-slate-900/20 transition-all hover:-translate-y-0.5"
                 >
-                  <UserPlus className="w-4 h-4 text-emerald-400" />
-                  <span>Cadastrar e Acessar Amigo Geo</span>
+                  <ArrowRight className="w-4 h-4 text-emerald-400" />
+                  <span>Abrir Amigo Geo</span>
                 </a>
                 <a
                   href="https://geo.portalamigo.com.br/#planos"
