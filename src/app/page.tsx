@@ -349,22 +349,11 @@ export default function HomePage() {
 
             {/* Imagem Real do Sistema ENEM */}
             <div className="lg:col-span-6">
-              <div className="relative rounded-3xl p-2.5 bg-gradient-to-b from-slate-200 to-slate-300/80 shadow-2xl border border-slate-200 overflow-hidden group">
-                <div className="bg-slate-900 rounded-2xl p-2 flex items-center justify-between text-xs text-slate-300 mb-2 px-4">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                    <span className="font-mono text-[11px] text-slate-400 ml-2">enem.portalamigo.com.br</span>
-                  </div>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400">
-                    Interface Real em Produção
-                  </span>
-                </div>
-                <div className="relative rounded-xl overflow-hidden border border-slate-200 bg-white shadow-inner">
+              <div className="relative rounded-3xl p-2 bg-white shadow-2xl border border-slate-200/80 overflow-hidden group">
+                <div className="relative rounded-2xl overflow-hidden border border-slate-100 bg-white">
                   <img
                     src="/screenshot-enem.png"
-                    alt="Interface Real do Prepára ENEM"
+                    alt="Painel Real do Estudante - Prepára ENEM"
                     className="w-full h-auto object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                   />
@@ -381,22 +370,11 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Imagem Real do Sistema GEO */}
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="relative rounded-3xl p-2.5 bg-gradient-to-b from-slate-200 to-slate-300/80 shadow-2xl border border-slate-200 overflow-hidden group">
-                <div className="bg-slate-900 rounded-2xl p-2 flex items-center justify-between text-xs text-slate-300 mb-2 px-4">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                    <span className="font-mono text-[11px] text-slate-400 ml-2">geo.portalamigo.com.br</span>
-                  </div>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-orange-500/20 text-orange-400">
-                    Interface Real em Produção
-                  </span>
-                </div>
-                <div className="relative rounded-xl overflow-hidden border border-slate-200 bg-white shadow-inner">
+              <div className="relative rounded-3xl p-2 bg-white shadow-2xl border border-slate-200/80 overflow-hidden group">
+                <div className="relative rounded-2xl overflow-hidden border border-slate-100 bg-white">
                   <img
-                    src="/screenshot-geo-home.png"
-                    alt="Interface Real do Amigo Geo"
+                    src="/screenshot-geo.png"
+                    alt="Diagnóstico Territorial Real - Amigo Geo"
                     className="w-full h-auto object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                   />
