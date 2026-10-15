@@ -74,9 +74,6 @@ export default function HomePage() {
             <a href="#geo" className="hover:text-blue-600 flex items-center gap-1.5 transition-colors">
               <span className="w-2 h-2 rounded-full bg-blue-500"></span> Amigo Geo
             </a>
-            <a href="#vagas" className="hover:text-purple-600 flex items-center gap-1.5 transition-colors">
-              <span className="w-2 h-2 rounded-full bg-purple-400"></span> Vagas (Em Breve)
-            </a>
           </nav>
 
           {/* Ações */}
@@ -457,49 +454,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. TEASER ROADMAP: Amigo Vagas (Em Breve) */}
-      <section id="vagas" className="py-20 bg-slate-100/60 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl p-8 sm:p-12 bg-gradient-to-r from-purple-950 via-slate-900 to-indigo-950 text-white overflow-hidden shadow-xl border border-purple-900/50">
-            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-purple-500/10 blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-bold mb-4">
-                <Briefcase className="w-3.5 h-3.5" />
-                Próximo Lançamento Oficial
-              </div>
-
-              <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
-                Amigo Vagas: O futuro da recolocação profissional com IA
-              </h3>
-
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
-                Estamos finalizando o **Amigo Vagas**, uma plataforma SaaS inovadora de oportunidades com matching semântico por Inteligência Artificial, gerador de cartas de apresentação personalizadas e alertas em tempo real.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <span className="text-xs font-bold text-purple-400 block mb-1">Matching Inteligente</span>
-                  <p className="text-[11px] text-slate-300">Conexão precisa entre perfil do candidato e requisitos da vaga.</p>
-                </div>
-                <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <span className="text-xs font-bold text-purple-400 block mb-1">Simulador de Entrevistas</span>
-                  <p className="text-[11px] text-slate-300">Treine respostas com IA antes das entrevistas reais com recrutadores.</p>
-                </div>
-                <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                  <span className="text-xs font-bold text-purple-400 block mb-1">Alertas Imediatos</span>
-                  <p className="text-[11px] text-slate-300">Notificações direcionadas no WhatsApp e e-mail assim que a vaga abrir.</p>
-                </div>
-              </div>
-
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-500/10 text-purple-300 text-xs font-semibold border border-purple-500/20">
-                <Clock className="w-4 h-4 text-purple-400" />
-                <span>Integração em andamento no Ecossistema Portal Amigo</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 7. Footer Unificado & Institucional */}
       <footer className="bg-white text-slate-600 text-sm py-16 border-t border-slate-200">
