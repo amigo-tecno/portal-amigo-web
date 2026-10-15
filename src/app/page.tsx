@@ -614,12 +614,15 @@ export default function HomePage() {
           <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
             <p>© 2026 Portal Amigo. Todos os direitos reservados.</p>
             <div className="flex items-center gap-6">
-              <a href="https://enem.portalamigo.com.br/termos" target="_blank" rel="noopener noreferrer" className="hover:text-slate-800">
+              <Link href="/termos" className="hover:text-slate-800 transition-colors">
                 Termos de Uso
-              </a>
-              <a href="https://enem.portalamigo.com.br/privacidade" target="_blank" rel="noopener noreferrer" className="hover:text-slate-800">
+              </Link>
+              <Link href="/privacidade" className="hover:text-slate-800 transition-colors">
                 Privacidade
-              </a>
+              </Link>
+              <Link href="/cookies" className="hover:text-slate-800 transition-colors">
+                Cookies
+              </Link>
             </div>
           </div>
         </div>
