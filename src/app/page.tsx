@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  GraduationCap,
+  Wheat,
   MapPin,
   Briefcase,
   ExternalLink,
@@ -22,7 +22,9 @@ import {
   Clock,
   Compass,
   FileText,
-  UserPlus
+  UserPlus,
+  Coins,
+  BadgeDollarSign
 } from "lucide-react";
 
 export default function HomePage() {
@@ -66,8 +68,8 @@ export default function HomePage() {
           {/* Links de navegação */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
             <a href="#produtos" className="hover:text-slate-900 transition-colors">Nossos Produtos</a>
-            <a href="#enem" className="hover:text-emerald-600 flex items-center gap-1.5 transition-colors">
-              <span className="w-2 h-2 rounded-full bg-emerald-500"></span> Prepára ENEM
+            <a href="#agricola" className="hover:text-emerald-600 flex items-center gap-1.5 transition-colors">
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span> Amigo Agrícola
             </a>
             <a href="#geo" className="hover:text-blue-600 flex items-center gap-1.5 transition-colors">
               <span className="w-2 h-2 rounded-full bg-blue-500"></span> Amigo Geo
@@ -80,12 +82,12 @@ export default function HomePage() {
           {/* Ações */}
           <div className="flex items-center gap-3">
             <a
-              href="https://enem.portalamigo.com.br"
+              href="https://amigoagricola.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 text-xs font-bold px-4 py-2.5 rounded-xl border border-slate-200 text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 transition-all shadow-xs"
             >
-              <span>Acessar ENEM</span>
+              <span>Acessar Agrícola</span>
               <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
             </a>
             <a
@@ -112,21 +114,21 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] max-w-4xl mx-auto">
-            Plataformas especializadas que aceleram sua <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 bg-clip-text text-transparent">educação</span> e seu <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">agronegócio</span>.
+            Plataformas especializadas que aceleram seus negócios e o <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 bg-clip-text text-transparent">agronegócio brasileiro</span>.
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-            Reunimos inteligência artificial de última geração, bases de dados federais oficiais e engenharia robusta em ferramentas desenhadas para máxima precisão e resultados.
+            Reunimos inteligência territorial geoespacial, cotações de commodities em tempo real, marketplace de fazendas e tecnologia robusta desenhada para máxima segurança e resultados.
           </p>
 
           {/* Cards Rápidos de Escolha no Hero */}
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
             <a
-              href="#enem"
+              href="#agricola"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-lg shadow-emerald-600/20 hover:shadow-emerald-600/30 transition-all hover:-translate-y-0.5"
             >
-              <GraduationCap className="w-5 h-5" />
-              <span>Conhecer Prepára ENEM</span>
+              <Wheat className="w-5 h-5" />
+              <span>Conhecer Amigo Agrícola</span>
             </a>
             <a
               href="#geo"
@@ -140,16 +142,16 @@ export default function HomePage() {
           {/* Métricas e Prova Social */}
           <div className="mt-16 pt-10 border-t border-slate-200/80 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="flex flex-col items-center">
-              <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">2.430+</span>
-              <span className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Questões Homologadas do ENEM</span>
+              <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">R$ 500 Mi+</span>
+              <span className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Em Fazendas & Imóveis Rurais</span>
             </div>
             <div className="flex flex-col items-center">
               <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">8,5 Mi</span>
               <span className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Imóveis SICAR Auditáveis</span>
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">1998 a 2024</span>
-              <span className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Cobertura Histórica Oficial</span>
+              <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">100% Real Time</span>
+              <span className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Cotações Soja, Milho e Boi</span>
             </div>
             <div className="flex flex-col items-center">
               <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">100%</span>
@@ -173,49 +175,49 @@ export default function HomePage() {
 
           {/* Grid dos Dois Produtos Principais + Teaser Vagas */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-            {/* Card Teaser 1: ENEM */}
+            {/* Card Teaser 1: Amigo Agrícola */}
             <div className="group relative rounded-3xl p-8 bg-gradient-to-br from-white to-emerald-50/40 border border-emerald-100 shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shadow-md shadow-emerald-600/30 mb-6 group-hover:scale-105 transition-transform">
-                  <GraduationCap className="w-7 h-7" />
+                  <Wheat className="w-7 h-7" />
                 </div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">Educação & IA</span>
-                  <span className="text-xs text-slate-400">• enem.portalamigo.com.br</span>
+                  <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">Agronegócio & Imobiliário</span>
+                  <span className="text-xs text-slate-400">• amigoagricola.com.br</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">Prepára ENEM</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Amigo Agrícola</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  SaaS educacional completo com simulados adaptativos, mais de 2.430 questões catalogadas da história do ENEM, predição de nota TRI e resoluções comentadas passo a passo por inteligência artificial ultrarrápida.
+                  Portal e marketplace especializado na compra e venda de fazendas, áreas agrícolas, áreas de preservação e pecuária. Conta com cotações diárias de commodities, diretório de corretores credenciados e empresas do agro.
                 </p>
                 <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium mb-8">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>2.430 questões de 1998 a 2024 com gabaritos oficiais</span>
+                    <span>Catálogo de fazendas e propriedades rurais com fotos em alta definição</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Resoluções explicadas com IA em menos de 1 segundo</span>
+                    <span>Cotações agrícolas atualizadas: Soja, Milho, Boi Gordo e Bezerro</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Simulados adaptativos com cálculo preditivo TRI</span>
+                    <span>Rede de corretores CRECI credenciados e empresas parceiras do agro</span>
                   </li>
                 </ul>
               </div>
               <div className="pt-6 border-t border-emerald-100/80 flex items-center justify-between">
                 <a
-                  href="#enem"
+                  href="#agricola"
                   className="text-xs font-bold text-slate-600 hover:text-slate-900"
                 >
                   Ver detalhes da plataforma ↓
                 </a>
                 <a
-                  href="https://enem.portalamigo.com.br"
+                  href="https://amigoagricola.com.br"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-bold px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-xs transition-all"
                 >
-                  <span>Abrir Prepára ENEM</span>
+                  <span>Abrir Amigo Agrícola</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -272,88 +274,88 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. SEÇÃO DETALHADA: Prepára ENEM */}
-      <section id="enem" className="py-20 sm:py-28 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
+      {/* 4. SEÇÃO DETALHADA: Amigo Agrícola */}
+      <section id="agricola" className="py-20 sm:py-28 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Texto & Recursos */}
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold">
-                <Award className="w-3.5 h-3.5" />
-                Plataforma Educacional Inteligente
+                <Wheat className="w-3.5 h-3.5" />
+                Plataforma de Negócios & Cotações Rurais
               </div>
               
               <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-                A preparação definitiva para conquistar sua vaga no <span className="text-emerald-600">ENEM</span>.
+                O marketplace definitivo para negociações de <span className="text-emerald-600">fazendas e terras</span>.
               </h2>
               
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-                Desenvolvemos o Prepára ENEM para estudantes que valorizam o tempo e exigem precisão. Não perca horas com explicações genéricas: estude com a base oficial completa de mais de 2.430 questões e suporte de IA instantâneo.
+                Desenvolvemos o Amigo Agrícola para conectar produtores rurais, investidores e corretores credenciados a oportunidades de alto valor. Encontre propriedades rurais auditadas, acompanhe cotações diárias de commodities agrícolas e impulsione seus negócios no campo.
               </p>
 
               {/* Grid de Diferenciais */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
                   <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-3">
-                    2.4k+
-                  </div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">Todas as Edições Oficiais</h4>
-                  <p className="text-xs text-slate-500">De 1998 a 2024 catalogadas e filtráveis por matéria, ano e dificuldade.</p>
-                </div>
-
-                <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-3">
-                    <Cpu className="w-4 h-4" />
-                  </div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">IA com Resolução em 1s</h4>
-                  <p className="text-xs text-slate-500">Explicações didáticas por etapa, eliminando distratores com precisão.</p>
-                </div>
-
-                <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-3">
                     <TrendingUp className="w-4 h-4" />
                   </div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">Algoritmo TRI Realista</h4>
-                  <p className="text-xs text-slate-500">Entenda sua coerência pedagógica e notas estimadas por área.</p>
+                  <h4 className="font-bold text-slate-900 text-sm mb-1">Cotações Agro em Tempo Real</h4>
+                  <p className="text-xs text-slate-500">Soja, Milho, Boi Gordo e Bezerro com referências regionais de mercado.</p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
                   <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-3">
-                    <FileCheck className="w-4 h-4" />
+                    <Layers className="w-4 h-4" />
                   </div>
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">Simulados Adaptativos</h4>
-                  <p className="text-xs text-slate-500">Gere provas com a quantidade de questões e matérias que desejar.</p>
+                  <h4 className="font-bold text-slate-900 text-sm mb-1">Fazendas & Áreas Selecionadas</h4>
+                  <p className="text-xs text-slate-500">Anúncios ricos com metragens, aptidão de solo, benfeitorias e recursos hídricos.</p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-3">
+                    <ShieldCheck className="w-4 h-4" />
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-sm mb-1">Corretores Credenciados</h4>
+                  <p className="text-xs text-slate-500">Profissionais verificados com registro CRECI para máxima segurança jurídica.</p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm mb-3">
+                    <Award className="w-4 h-4" />
+                  </div>
+                  <h4 className="font-bold text-slate-900 text-sm mb-1">Planos & Destaques Premium</h4>
+                  <p className="text-xs text-slate-500">Ferramentas de visibilidade máxima para imobiliárias e corretores autônomos.</p>
                 </div>
               </div>
 
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <a
-                  href="https://enem.portalamigo.com.br"
+                  href="https://amigoagricola.com.br"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md shadow-emerald-600/20 transition-all hover:-translate-y-0.5"
                 >
-                  <span>Iniciar Estudos no Prepára ENEM</span>
+                  <span>Explorar Imóveis no Amigo Agrícola</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://enem.portalamigo.com.br/planos"
+                  href="https://amigoagricola.com.br/#planos"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-sm transition-all shadow-xs"
                 >
-                  <span>Ver Planos & Assinaturas</span>
+                  <span>Anunciar uma Propriedade</span>
                 </a>
               </div>
             </div>
 
-            {/* Imagem Real do Sistema ENEM */}
+            {/* Imagem Real do Sistema Amigo Agrícola */}
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl p-2 bg-white shadow-2xl border border-slate-200/80 overflow-hidden group">
                 <div className="relative rounded-2xl overflow-hidden border border-slate-100 bg-white">
                   <img
-                    src="/screenshot-enem.png"
-                    alt="Painel Real do Estudante - Prepára ENEM"
+                    src="/screenshot-agricola.png"
+                    alt="Vitrine de Imóveis e Fazendas - Amigo Agrícola"
                     className="w-full h-auto object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                   />
@@ -529,35 +531,35 @@ export default function HomePage() {
                 <span className="font-extrabold text-base text-slate-900 tracking-tight">PORTAL AMIGO</span>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed">
-                Ecossistema de plataformas tecnológicas inteligentes integrando educação, agronegócio e carreiras com alta confiabilidade e segurança.
+                Ecossistema de plataformas tecnológicas inteligentes integrando agronegócio, geoespacial, inteligência artificial e carreiras com alta confiabilidade e segurança.
               </p>
               <div className="text-[11px] text-slate-400 font-mono">
                 portalamigo.com.br
               </div>
             </div>
 
-            {/* Coluna 2: Prepára ENEM */}
+            {/* Coluna 2: Amigo Agrícola */}
             <div className="space-y-3">
-              <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider">Prepára ENEM</h5>
+              <h5 className="font-bold text-slate-900 text-xs uppercase tracking-wider">Amigo Agrícola</h5>
               <ul className="space-y-2 text-xs">
                 <li>
-                  <a href="https://enem.portalamigo.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
+                  <a href="https://amigoagricola.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
                     Página Inicial
                   </a>
                 </li>
                 <li>
-                  <a href="https://enem.portalamigo.com.br/planos" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
-                    Planos e Assinaturas
+                  <a href="https://amigoagricola.com.br/#planos" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
+                    Planos e Anúncios
                   </a>
                 </li>
                 <li>
-                  <a href="https://enem.portalamigo.com.br/questoes" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
-                    Banco com 2.430 Questões
+                  <a href="https://amigoagricola.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
+                    Cotações de Commodities
                   </a>
                 </li>
                 <li>
-                  <a href="https://enem.portalamigo.com.br/simulado" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
-                    Simulados com IA
+                  <a href="https://amigoagricola.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 transition-colors">
+                    Imóveis Rurais & Fazendas
                   </a>
                 </li>
               </ul>
